@@ -5,8 +5,9 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 import time
 import os
+import sys
 
-
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from cluster import cluster
 from utils import find_optimal_k_elbow
 
@@ -210,3 +211,4 @@ with open(filename_report, "w", encoding="utf-8") as f_report:
 
 print("\n--- Metrics ---")
 print(df_metrics.to_string(index=False))
+
