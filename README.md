@@ -18,3 +18,49 @@ To keep the repository clean, the core logic is located in the root, while the c
 │   └── comparison_with_kmeans.py  # Script comparing GA vs K-Means (Metrics + Reports)
 ├── requirements.txt           # List of dependencies
 └── README.md                  # Project documentation
+```
+
+## Key Features
+* **Global Optimization:** Unlike K-Means, which can get stuck in local minima, the GA explores the solution space globally using evolutionary operators.
+* **Custom Fitness Function:** Optimized for TWCV (Total Within Cluster Variance) to maximize cluster compactness.
+* **Bioinformatics Validated:** Tested on real cancer datasets (BRCA, CRC, GBM, LUAD) with ground-truth biological subtypes (PAM50, CMS, Verhaak, etc.).
+* **Stability Analysis:** Includes tools to measure the stability of the clustering over multiple runs.
+
+## Installation & Requirements
+
+Ensure you have Python 3.8+ installed. Install the required dependencies:
+
+```bash
+pip install numpy pandas scikit-learn matplotlib seaborn
+```
+
+## Usage
+
+### 1. Running the Genetic Algorithm (Single Run)
+To run the GA on a dataset and obtain the cluster labels:
+
+1.  Place your dataset file (e.g., `data_mrna_seq.txt`) in the root directory.
+2.  Edit `run.py` to point to your dataset filename.
+3.  Run the script:
+
+```bash
+python run.py
+```
+
+### 2. Comparative Analysis (GA vs K-Means)
+The script in the `comparisons/` folder performs a full benchmark:
+* Runs both GA and K-Means.
+* Calculates metrics: **Silhouette Score**, **TWCV**, **Time**.
+* Generates detailed **text reports** mapping clusters to biological groups.
+* Produces **Heatmaps** and **Confusion Matrices**.
+
+**How to run it:**
+Since the script is in a subfolder, it automatically handles imports from the parent directory (provided the system path fix is applied). Run it as follows:
+
+```bash
+python comparisons/comparison_with_kmeans.py
+```
+**Outputs**
+The comparison scripts generates the following files:
+* metrics_comparison.csv: table comparing time, silhouette and TWCV.
+* gene_report.txt: text file showing exactly which genes ended up in which clusters.
