@@ -133,4 +133,3 @@ def plot_results_side_by_side(ga_model, original_data):
     plt.tight_layout()
     plt.show()
 
-    return twcv
