@@ -133,33 +133,4 @@ def plot_results_side_by_side(ga_model, original_data):
     plt.tight_layout()
     plt.show()
 
-
-def calculate_twcv_external(labels, points, n_clusters):
-    """
-    Ricalcola il Total Within-Cluster Variation (TWCV) basato sul Coseno
-    per un set di etichette qualsiasi (es. quelle del K-Means).
-    """
-    twcv = 0.0
-    for k in range(n_clusters):
-        # Prendi i punti assegnati al cluster k
-        cluster_points = points[labels == k]
-        
-        if len(cluster_points) > 0:
-            # Calcola il centroide
-            mean_vec = np.mean(cluster_points, axis=0)
-            
-            # Normalizza il centroide (Cruciale per il Coseno)
-            norm = np.linalg.norm(mean_vec)
-            if norm > 1e-9:
-                centroid = mean_vec / norm
-            else:
-                centroid = mean_vec
-            
-            # Calcola Distanza Coseno: 1 - (Punto . Centroide)
-            # Nota: points sono già normalizzati dal preprocessing
-            similarities = np.dot(cluster_points, centroid)
-            distances = 1.0 - similarities
-            
-            twcv += np.sum(distances)
-            
     return twcv
