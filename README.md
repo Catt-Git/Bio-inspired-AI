@@ -16,7 +16,6 @@ To keep the repository clean, the core logic is located in the root, while the c
 ├── run.py                     # Script to run a single instance of the GA
 ├── comparisons/               # Folder for benchmarking and validation
 │   └── comparison_with_kmeans.py  # Script comparing GA vs K-Means (Metrics + Reports)
-├── requirements.txt           # List of dependencies
 └── README.md                  # Project documentation
 ```
 
