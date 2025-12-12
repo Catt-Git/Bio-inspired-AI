@@ -46,22 +46,6 @@ Please download the datasets from the following links and place them in the `dat
 | **GBM** | Glioblastoma Multiforme | Verhaak | [https://portal.gdc.cancer.gov/projects/TCGA-GBM](#) |
 | **LUAD** | Lung Adenocarcinoma | Wilkerson | [https://www.cancerimagingarchive.net/collection/tcga-lusc/](#) |
 
-### Directory Structure
-To ensure the scripts run correctly, your project folder should look like this after downloading:
-
-```text
-project-root/
-├── data/                  <-- Create this folder
-│   ├── BRCA.csv      <-- Place downloaded files here
-│   ├── CRC.csv
-│   ├── GBM.csv
-│   └── LUAD.csv
-├── comparison_with_kmeans.py
-├── main_clustering.py
-├── README.md
-└── ...
-```
-
 ## Usage
 
 ### 1. Running the Genetic Algorithm (Single Run)
