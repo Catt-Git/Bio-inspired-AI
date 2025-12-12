@@ -34,6 +34,36 @@ Ensure you have Python 3.8+ installed. Install the required dependencies:
 pip install numpy pandas scikit-learn matplotlib seaborn
 ```
 
+Due to GitHub's file size limits, the gene expression datasets used in this project are hosted externally. All datasets are derived from **The Cancer Genome Atlas (TCGA)** and have been pre-processed to retain the **top 3000 genes** with the highest variance.
+
+### Download Links
+Please download the datasets from the following links and place them in the `data/` directory of this repository.
+
+| Dataset | Cancer Type | Signatures | Size | Download |
+| :--- | :--- | :--- | :--- | :--- |
+| **BRCA** | Breast Invasive Carcinoma | PAM50 | ~X MB | [https://portal.gdc.cancer.gov/projects/TCGA-BRCA](#) |
+| **CRC** | Colorectal Cancer | CMS | ~X MB | [https://portal.gdc.cancer.gov/projects/TCGA-COAD](#) |
+| **GBM** | Glioblastoma Multiforme | Verhaak | ~X MB | [https://portal.gdc.cancer.gov/projects/TCGA-GBM](#) |
+| **LUAD** | Lung Adenocarcinoma | Wilkerson | ~X MB | [https://www.cancerimagingarchive.net/collection/tcga-lusc/](#) |
+
+> **Note:** Replace the `[Download Here](#)` links above with your actual hosting URLs (e.g., Google Drive, Dropbox, OneDrive).
+
+### Directory Structure
+To ensure the scripts run correctly, your project folder should look like this after downloading:
+
+```text
+project-root/
+├── data/                  <-- Create this folder
+│   ├── BRCA.csv      <-- Place downloaded files here
+│   ├── CRC.csv
+│   ├── GBM.csv
+│   └── LUAD.csv
+├── comparison_with_kmeans.py
+├── main_clustering.py
+├── README.md
+└── ...
+```
+
 ## Usage
 
 ### 1. Running the Genetic Algorithm (Single Run)
