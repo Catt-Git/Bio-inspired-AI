@@ -67,7 +67,6 @@ The script in the `comparisons/` folder performs a full benchmark:
 * Produces **Heatmaps** and **Confusion Matrices**.
 
 **How to run it:**
-Since the script is in a subfolder, it automatically handles imports from the parent directory (provided the system path fix is applied). Run it as follows:
 
 ```bash
 python comparisons/comparison_with_kmeans.py
