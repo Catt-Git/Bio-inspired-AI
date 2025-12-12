@@ -39,7 +39,7 @@ Due to GitHub's file size limits, the gene expression datasets used in this proj
 ### Download Links
 Please download the datasets from the following links and place them in the `data/` directory of this repository.
 
-| Dataset | Cancer Type | Signatures | Size | Download |
+| Dataset | Cancer Type | Signatures | Download |
 | :--- | :--- | :--- | :--- | :--- |
 | **BRCA** | Breast Invasive Carcinoma | PAM50 | [https://portal.gdc.cancer.gov/projects/TCGA-BRCA](#) |
 | **CRC** | Colorectal Cancer | CMS | [https://portal.gdc.cancer.gov/projects/TCGA-COAD](#) |
