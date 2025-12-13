@@ -37,7 +37,7 @@ x_train = normalize(x_scaled)
 # Elbow method configuration
 # Set use_elbow_method = True to automatically find optimal k
 # Set use_elbow_method = False to use a specific k value
-use_elbow_method = False
+use_elbow_method = True
 n_clusters = 5  # Used only if use_elbow_method = False
 
 if use_elbow_method:
@@ -60,6 +60,7 @@ print(f"Execution time: {exe_time:.2f} seconds")
 
 ## -- Plot Results --
 plot_results_side_by_side(model, x_original)
+
 
 
 
