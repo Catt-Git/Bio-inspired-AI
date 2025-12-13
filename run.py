@@ -8,7 +8,8 @@ import time
 
 ## -- Data Loading -- 
 
-df = pd.read_csv("response_serum_517.csv", index_col=0)
+## INSERT DATASET (.csv file) HERE
+df = pd.read_csv("dataset.csv", index_col=0)
 # Extract expression matrix 
 x_original = df.values
 
@@ -59,5 +60,6 @@ print(f"Execution time: {exe_time:.2f} seconds")
 
 ## -- Plot Results --
 plot_results_side_by_side(model, x_original)
+
 
 
